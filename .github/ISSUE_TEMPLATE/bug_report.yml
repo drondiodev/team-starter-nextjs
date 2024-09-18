@@ -1,0 +1,124 @@
+name: Rapport de bug
+description: Signalez un problème ou une erreur
+labels: 'type: bug, statut: triage'
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci de prendre le temps de remplir ce rapport de bug. Veuillez fournir autant d'informations que possible pour nous aider à résoudre le problème rapidement.
+
+  - type: input
+    attributes:
+      label: Version
+      description: Quelle version du logiciel utilisez-vous ?
+    validations:
+      required: true
+
+  - type: dropdown
+    attributes:
+      label: Environnement
+      description: Dans quel environnement le bug se produit-il ?
+      options:
+        - Production
+        - Développement
+        - Test
+    validations:
+      required: true
+
+  - type: dropdown
+    attributes:
+      label: Système d'exploitation
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - iOS
+        - Android
+        - Autre (précisez dans la description)
+    validations:
+      required: true
+
+  - type: dropdown
+    attributes:
+      label: Navigateur (si applicable)
+      options:
+        - Chrome
+        - Firefox
+        - Safari
+        - Edge
+        - Autre (précisez dans la description)
+
+  - type: dropdown
+    attributes:
+      label: Gravité
+      description: Quelle est la gravité de ce bug ?
+      options:
+        - Critique (bloquant)
+        - Majeur
+        - Mineur
+        - Cosmétique
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Description du problème
+      description: Décrivez clairement et concisément le bug.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Étapes pour reproduire
+      description: Fournissez des étapes détaillées pour reproduire le bug.
+      value: |
+        1. 
+        2. 
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Comportement attendu
+      description: Décrivez ce que vous attendiez qu'il se passe.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Comportement actuel
+      description: Décrivez ce qui se passe réellement.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Journaux d'erreurs
+      description: Collez tous les journaux d'erreurs pertinents ici.
+      render: shell
+
+  - type: textarea
+    attributes:
+      label: Extraits de code
+      description:
+        Si applicable, ajoutez des extraits de code pour aider à expliquer le
+        problème.
+      render: javascript
+
+  - type: textarea
+    attributes:
+      label: Informations supplémentaires
+      description:
+        Ajoutez toute autre information pertinente, captures d'écran, etc.
+
+  - type: checkboxes
+    attributes:
+      label: Termes et conditions
+      options:
+        - label: J'ai vérifié que ce bug n'a pas déjà été signalé.
+          required: true
+        - label:
+            J'ai fourni toutes les informations nécessaires pour reproduire ce
+            bug.
+          required: true

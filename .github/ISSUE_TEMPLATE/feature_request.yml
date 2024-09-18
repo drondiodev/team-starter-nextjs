@@ -1,0 +1,68 @@
+---
+name: Demande de fonctionnalité
+description: Suggérez une idée pour ce projet
+labels: 'type: amélioration, statut: triage'
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci pour votre suggestion ! Nous apprécions votre contribution à l'amélioration de notre projet.
+
+  - type: textarea
+    attributes:
+      label: Problème lié
+      description:
+        Votre demande de fonctionnalité est-elle liée à un problème ?
+        Décrivez-le.
+      placeholder: 'Ex. Je suis toujours frustré quand [...]'
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Solution souhaitée
+      description: Décrivez la solution que vous aimeriez voir.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Alternatives envisagées
+      description: Décrivez les alternatives que vous avez envisagées.
+    validations:
+      required: false
+
+  - type: textarea
+    attributes:
+      label: Contexte additionnel
+      description:
+        Ajoutez tout autre contexte ou captures d'écran concernant la demande de
+        fonctionnalité ici.
+    validations:
+      required: false
+
+  - type: dropdown
+    attributes:
+      label: Importance
+      description: Quelle est l'importance de cette fonctionnalité pour vous ?
+      options:
+        - Critique
+        - Importante
+        - Utile
+        - Mineure
+    validations:
+      required: true
+
+  - type: checkboxes
+    attributes:
+      label: Termes et conditions
+      options:
+        - label:
+            J'ai vérifié que cette fonctionnalité n'a pas déjà été demandée.
+          required: true
+        - label:
+            Je suis prêt à contribuer à l'implémentation de cette fonctionnalité
+            si nécessaire.
+          required: false
+---
+
