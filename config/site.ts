@@ -1,5 +1,6 @@
 type SiteConfig = {
   name: string;
+  author: string;
   description: string;
   url: string;
   ogImage: string;
@@ -11,6 +12,7 @@ type SiteConfig = {
 
 const siteConfig: SiteConfig = {
   name: 'Nom du projet',
+  author: "Nom de l'auteur",
   description: 'Description de votre projet',
   url: 'adresse_web_du_projet',
   ogImage: 'adresse_web_du_projet/og',

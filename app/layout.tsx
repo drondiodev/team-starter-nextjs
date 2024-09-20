@@ -25,11 +25,11 @@ export const metadata: Metadata = {
   keywords: ['Next.js', 'Tailwind CSS', 'Husky', 'Lint-Staged', 'Docker'],
   authors: [
     {
-      name: 'drondiodev',
-      url: 'https://github.com/drondiodev',
+      name: siteConfig.author,
+      url: siteConfig.links.github,
     },
   ],
-  creator: 'drondiodev',
+  creator: siteConfig.author,
   openGraph: {
     type: 'website',
     locale: 'fr_FR',
@@ -60,6 +60,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
+      <head>
+        {/* <link rel="icon" href="/favicon.ico" /> */}
+        <link
+          rel="icon"
+          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📦</text></svg>"
+        ></link>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
