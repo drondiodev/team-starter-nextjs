@@ -27,7 +27,7 @@ jobs:
         run: pnpm run lint
 
       - name: Build Docker image
-        run: docker build -t nextjs14cicd:latest .
+        run: docker build -t team-starter-nextjs:latest .
 
       - name: Run Docker container
-        run: docker run -d -p 3000:3000 nextjs14cicd:latest
+        run: docker run -d -p 3000:3000 team-starter-nextjs:latest

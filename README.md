@@ -1,19 +1,17 @@
-# Drondiodev-template-starter
+# TEAM DEVELOPMENT STARTER KIT
 
-![](https://visitor-badge.laobi.icu/badge?page_id=drondiodev.nextjs14cicd)
+![](https://visitor-badge.laobi.icu/badge?page_id=drondiodev.team-starter-nextjs)
 
-# Drondiodev-template
+![GitHub last commit](https://img.shields.io/github/last-commit/drondiodev/team-starter-nextjs)
+![GitHub forks](https://img.shields.io/github/forks/drondiodev/team-starter-nextjs)
+![GitHub Repo stars](https://img.shields.io/github/stars/drondiodev/team-starter-nextjs)
+![GitHub watchers](https://img.shields.io/github/watchers/drondiodev/team-starter-nextjs)
 
-![GitHub last commit](https://img.shields.io/github/last-commit/drondiodev/Drondiodev-template)
-![GitHub forks](https://img.shields.io/github/forks/drondiodev/nextjs14cicd)
-![GitHub Repo stars](https://img.shields.io/github/stars/drondiodev/nextjs14cicd)
-![GitHub watchers](https://img.shields.io/github/watchers/drondiodev/nextjs14cicd)
-
-nextjs14cicd est un template Next.js prêt à l'emploi, conçu pour vous permettre
-de démarrer rapidement le développement de votre nouvelle application web. Il
-intègre les meilleures pratiques et les dernières fonctionnalités de Next.js,
-ainsi que des outils de développement essentiels pour améliorer votre
-productivité.
+TEAM DEVELOPMENT STARTER KIT est un template Next.js prêt à l'emploi, conçu pour
+vous permettre de démarrer rapidement le développement de votre nouvelle
+application web en équipe. Il intègre les meilleures pratiques et les dernières
+fonctionnalités de Next.js, ainsi que des outils de développement essentiels
+pour améliorer votre productivité.
 
 ## Fonctionnalités
 
@@ -36,6 +34,8 @@ productivité.
   vérifications de lint et de formatage avant chaque commit.
 - **Docker** :
 
+- **Zod** :
+
 ## Utilisation
 
 1. Clonez le dépôt :
@@ -53,7 +53,7 @@ ou
 En utilisant `create-next-app` :
 
 ```bash
-pnpm create next-app  -e https://github.com/drondiodev/nextjs14cicd ts-pnpm
+pnpm create next-app  -e https://github.com/drondiodev/team-starter-nextjs ts-pnpm
 ```
 
 2. Accédez au répertoire du projet :

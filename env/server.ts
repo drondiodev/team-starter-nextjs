@@ -32,5 +32,6 @@ export const env = createEnv({
     process.exit(1);
   },
   emptyStringAsUndefined: true,
+
   experimental__runtimeEnv: process.env,
 });
