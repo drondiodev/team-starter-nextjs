@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import React from 'react';
 
+import GoogleAnalytics from '@/components/GoogleAnalytics';
+
 import './globals.css';
 import siteConfig from '@/config/site';
 
@@ -72,6 +74,7 @@ export default function RootLayout({
       >
         {children}
       </body>
+      <GoogleAnalytics />
     </html>
   );
 }

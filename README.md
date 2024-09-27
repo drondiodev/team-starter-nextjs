@@ -32,9 +32,11 @@ pour améliorer votre productivité.
   préconfigurés pour maintenir une base de code cohérente et lisible.
 - **Husky et Lint-Staged** : Des hooks de Git pour exécuter automatiquement les
   vérifications de lint et de formatage avant chaque commit.
-- **Docker** :
-
-- **Zod** :
+- **Docker** : Un outil de conteneurisation pour faciliter le déploiement et la
+  gestion des environnements de développement.
+- **Zod** : Un schéma de validation de données puissant et simple à utiliser.
+- **Google Analytics** : Un outil de suivi des performances pour analyser le
+  comportement des utilisateurs et améliorer l'expérience utilisateur.
 
 ## Utilisation
 
