@@ -3,8 +3,11 @@ import localFont from 'next/font/local';
 import React from 'react';
 
 import GoogleAnalytics from '@/components/GoogleAnalytics';
+import Footer from '@/components/footer';
+import Header from '@/components/header';
 
 import './globals.css';
+import Providers from './providers';
 import siteConfig from '@/config/site';
 
 const geistSans = localFont({
@@ -24,7 +27,14 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  keywords: ['Next.js', 'Tailwind CSS', 'Husky', 'Lint-Staged', 'Docker'],
+  keywords: [
+    'Next.js',
+    'Tailwind CSS',
+    'Husky',
+    'Lint-Staged',
+    'Docker',
+    'Google Analytics',
+  ],
   authors: [
     {
       name: siteConfig.author,
@@ -61,7 +71,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
+    <html lang="fr" className="scroll-smooth" suppressHydrationWarning>
       <head>
         {/* <link rel="icon" href="/favicon.ico" /> */}
         <link
@@ -70,9 +80,13 @@ export default function RootLayout({
         ></link>
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`flex min-h-screen flex-col ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <Providers>
+          <Header />
+          <main className="grow">{children}</main>
+          <Footer />
+        </Providers>
       </body>
       <GoogleAnalytics />
     </html>
