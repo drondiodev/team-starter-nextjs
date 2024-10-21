@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import localFont from 'next/font/local';
-import React from 'react';
+import { Inter } from 'next/font/google';
+import React, { Suspense } from 'react';
 
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 import Footer from '@/components/footer';
@@ -10,16 +10,7 @@ import './globals.css';
 import Providers from './providers';
 import siteConfig from '@/config/site';
 
-const geistSans = localFont({
-  src: './fonts/GeistVF.woff',
-  variable: '--font-geist-sans',
-  weight: '100 900',
-});
-const geistMono = localFont({
-  src: './fonts/GeistMonoVF.woff',
-  variable: '--font-geist-mono',
-  weight: '100 900',
-});
+const inter = Inter({ subsets: ['latin'], display: 'swap', preload: true });
 
 export const metadata: Metadata = {
   title: {
@@ -34,6 +25,7 @@ export const metadata: Metadata = {
     'Lint-Staged',
     'Docker',
     'Google Analytics',
+    'NextAuth',
   ],
   authors: [
     {
@@ -57,11 +49,11 @@ export const metadata: Metadata = {
     images: [`${siteConfig.url}/og`],
     creator: 'compte twitter',
   },
-  icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon-16x16.png',
-    apple: 'apple-touch-icon.png',
-  },
+  // icons: {
+  //   icon: '/favicon.ico',
+  //   shortcut: '/favicon-16x16.png',
+  //   apple: 'apple-touch-icon.png',
+  // },
   // metadataBase: new URL(siteConfig.url),
 };
 
@@ -72,23 +64,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className="scroll-smooth" suppressHydrationWarning>
-      <head>
-        {/* <link rel="icon" href="/favicon.ico" /> */}
-        <link
-          rel="icon"
-          href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📦</text></svg>"
-        ></link>
-      </head>
       <body
-        className={`flex min-h-screen flex-col ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`flex min-h-screen flex-col ${inter.className} antialiased`}
       >
         <Providers>
           <Header />
-          <main className="grow">{children}</main>
+          <main className="grow">
+            <Suspense>{children}</Suspense>
+          </main>
           <Footer />
         </Providers>
       </body>
-      <GoogleAnalytics />
+      {process.env.NODE_ENV === 'production' && <GoogleAnalytics />}
     </html>
   );
 }

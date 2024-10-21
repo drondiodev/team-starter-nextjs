@@ -37,6 +37,38 @@ pour améliorer votre productivité.
 - **Zod** : Un schéma de validation de données puissant et simple à utiliser.
 - **Google Analytics** : Un outil de suivi des performances pour analyser le
   comportement des utilisateurs et améliorer l'expérience utilisateur.
+- **NextAuth.js** : Intégration d'un système d'authentification robuste et
+  flexible, permettant une connexion sécurisée via Google.
+- **Gestion des variables d'environnement** : Utilisation de
+  `@t3-oss/env-nextjs` et Zod pour une validation stricte des variables
+  d'environnement, assurant une configuration sécurisée et sans erreur.
+- **Composants réutilisables** : Mise en place de composants comme AuthButton et
+  ThemeButton pour une interface utilisateur cohérente et facile à maintenir.
+- **Gestion des métadonnées** : Configuration avancée des métadonnées pour un
+  meilleur référencement (SEO) et partage sur les réseaux sociaux.
+- **Gestion des erreurs** : Implémentation d'une page 404 personnalisée pour une
+  meilleure expérience utilisateur en cas d'erreur.
+- **Templates pour les issues GitHub** : Ajout de templates pour les rapports de
+  bugs et les demandes de fonctionnalités, facilitant la contribution et le
+  suivi des problèmes.
+
+## Bénéfices
+
+- **Sécurité renforcée** : L'authentification NextAuth.js et la gestion
+  sécurisée des variables d'environnement réduisent les risques de failles de
+  sécurité.
+- **Productivité accrue** : Les composants réutilisables et les outils de
+  développement intégrés permettent aux développeurs de se concentrer sur la
+  logique métier plutôt que sur la configuration.
+- **Meilleure collaboration** : Les templates GitHub et les pratiques de
+  développement standardisées facilitent le travail d'équipe et la gestion du
+  projet.
+- **Expérience utilisateur améliorée** : La gestion des erreurs personnalisée et
+  l'interface utilisateur cohérente offrent une meilleure expérience aux
+  utilisateurs finaux.
+- **Optimisation pour les moteurs de recherche** : La configuration avancée des
+  métadonnées améliore la visibilité du site sur les moteurs de recherche et les
+  réseaux sociaux.
 
 ## Utilisation
 
@@ -77,7 +109,22 @@ pnpm dev
 Votre application Next.js sera alors accessible à l'adresse
 http://localhost:3000.
 
-5. Faites vos modifications puis :
+5. Configurez les variables d'environnement :
+
+   - Copiez le fichier `.env.example` en `.env.local`
+   - Remplissez les variables GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET,
+     NEXTAUTH_URL et NEXTAUTH_SECRET avec vos propres valeurs
+
+6. Lancez l'application :
+
+```bash
+pnpm dev
+```
+
+Votre application Next.js sera alors accessible à l'adresse
+http://localhost:3000.
+
+7. Faites vos modifications puis :
 
 ```bash
 git add -A
