@@ -6,6 +6,7 @@
 ![GitHub forks](https://img.shields.io/github/forks/drondiodev/team-starter-nextjs)
 ![GitHub Repo stars](https://img.shields.io/github/stars/drondiodev/team-starter-nextjs)
 ![GitHub watchers](https://img.shields.io/github/watchers/drondiodev/team-starter-nextjs)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 TEAM DEVELOPMENT STARTER KIT est un template Next.js prêt à l'emploi, conçu pour
 vous permettre de démarrer rapidement le développement de votre nouvelle
