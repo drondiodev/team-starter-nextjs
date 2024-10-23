@@ -3,13 +3,13 @@ import { ZodError, z } from 'zod';
 
 export const env = createEnv({
   server: {
-    NODE_ENV: z.enum(['development', 'production']),
+    NODE_ENV: z.enum(['development', 'production', 'test']),
     //exemple avec l'url de la DB
     // DATABASE_URL: z.string().url(),
-    GOOGLE_CLIENT_ID: z.string(),
-    GOOGLE_CLIENT_SECRET: z.string(),
+    GOOGLE_CLIENT_ID: z.string().min(1),
+    GOOGLE_CLIENT_SECRET: z.string().min(1),
     NEXTAUTH_URL: z.string().url(),
-    NEXTAUTH_SECRET: z.string(),
+    NEXTAUTH_SECRET: z.string().min(1),
   },
   onValidationError: (error: ZodError) => {
     console.error("❌ Variables d'environnement invalides :");
@@ -35,7 +35,13 @@ export const env = createEnv({
 
     process.exit(1);
   },
+  runtimeEnv: process.env as Record<
+    | 'NODE_ENV'
+    | 'GOOGLE_CLIENT_ID'
+    | 'GOOGLE_CLIENT_SECRET'
+    | 'NEXTAUTH_URL'
+    | 'NEXTAUTH_SECRET',
+    string | undefined
+  >,
   emptyStringAsUndefined: true,
-
-  experimental__runtimeEnv: process.env,
 });
